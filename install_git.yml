@@ -1,0 +1,12 @@
+---
+- name: Install Git on Fedora
+  hosts: all
+  gather_facts: yes
+  become: yes
+
+  tasks:
+    - name: Ensure Git is installed on Fedora
+      dnf:
+        name: git
+        state: present
+
